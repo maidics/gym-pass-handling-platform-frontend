@@ -50,3 +50,7 @@ Features are verified manually due to the scale and time constraint of this thes
 
 ### Payment features
 - **Payment features require Stripe publishable test key** to be inserted in .env (pk_test_... from: [StripeDashboard](https://dashboard.stripe.com/apikeys))
+
+---
+
+**All rights reserved. This code is provided for viewing purposes only. No permission is granted to copy, modify, or distribute without express written consent.**
