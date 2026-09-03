@@ -4,7 +4,9 @@ Frontend of my **thesis work**: payment facilitator and pass handling applicatio
 
 Provides english and hungarian UI for the full features set of the [backend application](https://github.com/maidics/gym-pass-handling-platform-backend) using TypeScript and React. Works in demo mode only.
 
-**Find hungarian thesis presentation and other docs [here](https://github.com/maidics/gym-pass-handling-platform-backend/tree/main/src).**
+**Find hungarian thesis presentation and other docs [here](https://github.com/maidics/gym-pass-handling-platform-backend/tree/main/docs).**
+
+---
 
 ## Features
 - Built-in ticketing tool - `Request` system:
@@ -18,6 +20,8 @@ Provides english and hungarian UI for the full features set of the [backend appl
 - Use your passes as a `User` by showing the pass' QR code to a `GymStaff` or `GymAdmin`
 - Receive feedback about the scanned passes as gym personnel and assigns keys to their gym session
 
+---
+
 ## Technologies
 - [React](https://react.dev/) - frontend library
 - [Stripe](https://stripe.com/) - to handle payments
@@ -29,6 +33,14 @@ Provides english and hungarian UI for the full features set of the [backend appl
 - [Lucide React](https://www.npmjs.com/package/lucide-react) - icon components
 - [Sonner](https://www.npmjs.com/package/sonner) - toast components
 - [Microsoft Fetch Event Source](https://www.npmjs.com/package/@microsoft/fetch-event-source) - for real time notifications
+
+---
+
+## Testing
+
+Features are verified manually due to the scale and time constraint of this thesis work.
+
+---
 
 ## Run the app
 
