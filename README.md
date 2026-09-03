@@ -2,7 +2,7 @@
 
 Frontend of my **thesis work**: payment facilitator and pass handling application for gyms. 
 
-Provides english and hungarian UI for the full features set of the [backend application](https://github.com/maidics/gym-pass-handling-platform-backend) using TypeScript and React. Works in demo mode only.
+Provides english and hungarian web UI for the full features set of the [backend application](https://github.com/maidics/gym-pass-handling-platform-backend) using TypeScript and React. Works in demo mode only.
 
 **Find hungarian thesis presentation and other docs [here](https://github.com/maidics/gym-pass-handling-platform-backend/tree/main/docs).**
 
