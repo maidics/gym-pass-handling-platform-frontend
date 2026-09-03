@@ -1,0 +1,15 @@
+﻿export const maxLength = {
+  Name: 100,
+  FullName: 200,
+  Email: 256,
+  Description: 1500,
+  Password: 128,
+  PhoneNumber: 16,
+  Title: 70,
+  AddressLine1: 200,
+  AddressLine2: 200,
+  City: 100,
+  State: 120,
+  PostalCode: 20,
+  CountryAlpha2: 2,
+};

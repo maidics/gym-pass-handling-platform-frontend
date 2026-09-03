@@ -1,0 +1,241 @@
+﻿/* Button */
+
+.btn-animated {
+    transition-property: transform;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-animated:hover:not(:disabled) {
+    transform: scale(1.05);
+}
+
+.btn-animated:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+/* Accordion */
+@keyframes accordion-down {
+    from {
+        height: 0;
+    }
+    to {
+        height: var(--radix-accordion-content-height);
+    }
+}
+
+@keyframes accordion-up {
+    from {
+        height: var(--radix-accordion-content-height);
+    }
+    to {
+        height: 0;
+    }
+}
+
+/* Dialog */
+
+.dialog-content {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    will-change: opacity, transform;
+}
+
+@keyframes dialog-content-show {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes dialog-content-hide {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.96);
+    }
+}
+
+.dialog-content[data-state="open"] {
+    animation: dialog-content-show 220ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.dialog-content[data-state="closed"] {
+    animation: dialog-content-hide 180ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Dropdown */
+
+.dropdown-menu-content {
+    /* don't hint transform, we only fade */
+    will-change: opacity;
+}
+
+.dropdown-menu-content[data-state="open"] .dropdown-menu-inner {
+    animation: dropdown-fade-in 150ms ease-out forwards;
+}
+
+.dropdown-menu-content[data-state="closed"] .dropdown-menu-inner {
+    animation: dropdown-fade-out 120ms ease-in forwards;
+}
+
+@keyframes dropdown-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes dropdown-fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* FilterableHeader */
+
+.filter-clear-btn {
+    transition:
+            opacity 200ms ease-out,
+            transform 200ms ease-out;
+}
+
+.filter-clear-btn--visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.filter-clear-btn--hidden {
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+}
+
+/* Collapsible */
+
+.collapsible-content {
+    overflow: hidden;
+    transform-origin: top center;
+    will-change: opacity, transform, height;
+}
+
+.collapsible-content[data-state="open"] {
+    animation: collapsible-down 230ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.collapsible-content[data-state="closed"] {
+    animation: collapsible-up 200ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes collapsible-down {
+    from {
+        opacity: 0;
+        height: 0;
+        transform: scaleY(0.96);
+    }
+    to {
+        opacity: 1;
+        height: var(--radix-collapsible-content-height);
+        transform: scaleY(1);
+    }
+}
+
+@keyframes collapsible-up {
+    from {
+        opacity: 1;
+        height: var(--radix-collapsible-content-height);
+        transform: scaleY(1);
+    }
+    to {
+        opacity: 0;
+        height: 0;
+        transform: scaleY(0.96);
+    }
+}
+
+/* Overlay */
+.dialog-overlay {
+    will-change: opacity;
+}
+
+@keyframes dialog-overlay-show {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes dialog-overlay-hide {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.dialog-overlay[data-state="open"] {
+    animation: dialog-overlay-show 220ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.dialog-overlay[data-state="closed"] {
+    animation: dialog-overlay-hide 180ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Select */
+.select-trigger-animated {
+    transition-property: transform, background-color, border-color;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.select-trigger-animated:hover:not(:disabled) {
+    transform: scale(1.01);
+    background-color: hsl(var(--accent));
+}
+
+.select-trigger-animated:active:not(:disabled) {
+    transform: scale(0.99);
+}
+
+@keyframes select-content-enter {
+    from {
+        opacity: 0;
+        transform: scale(0.98) translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes select-content-exit {
+    from {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.98) translateY(-4px);
+    }
+}
+
+.select-content-animated {
+    transform-origin: var(--radix-select-content-transform-origin);
+}
+
+.select-content-animated[data-state='open'] {
+    animation: select-content-enter 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.select-content-animated[data-state='closed'] {
+    animation: select-content-exit 0.15s ease-in;
+}
